@@ -33,7 +33,7 @@ function App() {
 
   function resetResult(e) {
     e.preventDefault();
-    resultRef.current.value = "";
+    setResult((result) => 0);
   }
 
   return (
@@ -42,7 +42,7 @@ function App() {
         <h1>Simplest Working Calculator</h1>
       </div>
       <form>
-        <p ref={resultRef}>Result is: {result}</p>
+        <p ref={resultRef}>{result}</p>
         <input
           pattern="[0-9]"
           ref={inputRef}
